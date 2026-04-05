@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ================= PRODUCTOS ================= */
-  fetch("http://localhost:3000/productos")
+  fetch("https://kgplus-web.onrender.com/productos")
     .then(res => {
       if (!res.ok) throw new Error("Error en el servidor");
       return res.json();
@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
       grid.innerHTML = "<p style='color:white; text-align:center; grid-column: 1/-1;'>Carregando catálogo...</p>";
 
       try {
-        const response = await fetch("http://localhost:3000/catalogo");
+        const response = await fetch("https://kgplus-web.onrender.com/catalogo");
         const data = await response.json();
         
         grid.innerHTML = "";
